@@ -1,0 +1,13 @@
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\bin\Debug\netstandard2.0\BlabberApp.Services.deps.json
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\bin\Debug\netstandard2.0\BlabberApp.Services.dll
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\bin\Debug\netstandard2.0\BlabberApp.Services.pdb
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\bin\Debug\netstandard2.0\BlabberApp.DataStore.dll
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\bin\Debug\netstandard2.0\BlabberApp.Domain.dll
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\bin\Debug\netstandard2.0\BlabberApp.Domain.pdb
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\bin\Debug\netstandard2.0\BlabberApp.DataStore.pdb
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\obj\Debug\netstandard2.0\BlabberApp.Services.csprojAssemblyReference.cache
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\obj\Debug\netstandard2.0\BlabberApp.Services.AssemblyInfoInputs.cache
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\obj\Debug\netstandard2.0\BlabberApp.Services.AssemblyInfo.cs
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\obj\Debug\netstandard2.0\BlabberApp.Services.csproj.CopyComplete
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\obj\Debug\netstandard2.0\BlabberApp.Services.dll
+C:\Users\Owner\csProject\BlabberApp\BlabberApp.Services\obj\Debug\netstandard2.0\BlabberApp.Services.pdb

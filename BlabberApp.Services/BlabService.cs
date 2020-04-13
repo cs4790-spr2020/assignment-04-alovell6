@@ -27,7 +27,11 @@ namespace BlabberApp.Services
         }
         public IEnumerable FindUserBlabs(string email)
         {
-            throw new NotImplementedException("FindUserBlabs");
+            //throw new NotImplementedException("FindUserBlabs");
+            //find e-mail 
+            //Figure out where the list of users are at pull and search with if statement and return e-mail,
+            //return (User)plugin(email);
+            return null;
         }
         public Blab CreateBlab(string msg, string email)
         {

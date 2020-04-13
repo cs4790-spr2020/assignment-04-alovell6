@@ -56,6 +56,7 @@ namespace BlabberApp.DataStoreTest
             User actual = (User)users[0];
             //Assert
             Assert.AreEqual(_user.Id.ToString(), actual.Id.ToString());
+                    // I dont know.
         }
     }
 }
