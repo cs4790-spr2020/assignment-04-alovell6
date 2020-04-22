@@ -9,7 +9,19 @@ namespace BlabberApp.DataStoreTest
     [TestClass]
     public class BlabAdapter_MySql_UnitTests
     {
-        private BlabAdapter _harness = new BlabAdapter(new MySqlBlab());
+        private BlabAdapter _harness;
+
+        [TestInitialize]
+        public void Setup()
+        {
+            _harness = new BlabAdapter(new MySqlBlab());
+            _harness.RemoveAll();
+        }
+        [TestCleanup]
+        public void TearDown()
+        {
+            _harness.RemoveAll();
+        }
 
         [TestMethod]
         public void Canary()
@@ -23,15 +35,12 @@ namespace BlabberApp.DataStoreTest
             //Arrange
             string email = "fooabar@example.com";
             User mockUser = new User(email);
-                 //Each time the teswt runs the number of blabs is increased by 1. So numOfBlabs should increase by 1
-            int numOfBlabs = (((ArrayList)_harness.GetByUserId(email)).Count) + 1;
             Blab blab = new Blab("Now is the time for, blabs...", mockUser);
             //Act
             _harness.Add(blab);
             ArrayList actual = (ArrayList)_harness.GetByUserId(email);
             //Assert
-            Assert.AreEqual(numOfBlabs, actual.Count);
-                    //potentially deleting the account could reset the blab count.
+            Assert.AreEqual(1, actual.Count);
         }
     }
 }

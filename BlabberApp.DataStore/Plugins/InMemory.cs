@@ -30,11 +30,11 @@ namespace BlabberApp.DataStore.Plugins
             {
                 if (Id.Equals(obj.Id)) return obj;
             }
-            return null;
+            throw new Exception("Not found");
         }
         public IEnumerable ReadByUserId(string Id)
         {
-            return null;
+            throw new Exception("Not found");
         }
         public IEntity ReadByUserEmail(string email)
         {
@@ -45,7 +45,7 @@ namespace BlabberApp.DataStore.Plugins
                     return user;
                 }
             }
-            return null;
+            throw new Exception("Not found");
         }
 
         public void Update(IEntity obj)
@@ -57,6 +57,10 @@ namespace BlabberApp.DataStore.Plugins
         public void Delete(IEntity obj)
         {
             this.buffer.Remove(obj);
+        }
+        public void DeleteAll()
+        {
+            this.buffer.Clear();
         }
     }
 }

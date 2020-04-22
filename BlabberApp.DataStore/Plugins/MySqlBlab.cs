@@ -13,7 +13,7 @@ namespace BlabberApp.DataStore.Plugins
         MySqlConnection dcBlab;
         public MySqlBlab()
         {
-            this.dcBlab = new MySqlConnection("server=142.93.114.73;database=alovell6;user=alovell6;password=letmein");
+            this.dcBlab = new MySqlConnection("server=142.93.114.73;database=donbstringham;user=donbstringham;password=letmein");
             try
             {
                 this.dcBlab.Open();
@@ -35,7 +35,7 @@ namespace BlabberApp.DataStore.Plugins
                 DateTime now = DateTime.Now;
                 string sql = "INSERT INTO blabs (sys_id, message, dttm_created, user_id) VALUES ('"
                      + blab.Id + "', '"
-                     + blab.Message + "', '"
+                     + MySql.Data.MySqlClient.MySqlHelper.EscapeString(blab.Message) + "', '"
                      + now.ToString("yyyy-MM-dd HH:mm:ss") + "', '"
                      + blab.User.Email + "')";
                 MySqlCommand cmd = new MySqlCommand(sql, this.dcBlab);
@@ -133,7 +133,12 @@ namespace BlabberApp.DataStore.Plugins
         {
             Blab blab = (Blab)obj;
         }
-        
+        public void DeleteAll()
+        {
+                string sql = "TRUNCATE TABLE blabs";
+                MySqlCommand cmd = new MySqlCommand(sql, this.dcBlab);
+                cmd.ExecuteNonQuery();
+        }
         private Blab DataRow2Blab(DataRow row)
         {
             User user = new User();
